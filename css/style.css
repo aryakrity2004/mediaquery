@@ -41,6 +41,7 @@ header i{
 .container{
     max-width: 1200px;
     margin:20px auto;
+    padding: 10px;
     /* border: 2px solid red; */
 }
 .container h1{
@@ -133,6 +134,56 @@ footer{
   background: #414040;
   text-align: center;
   padding: 15px;
+  margin:0px 40px;
   font-size: 14px;
   color: #aaa;
+}
+/* desktop first approach  */
+/* responsive part start  */
+/* tablet style  */
+@media (max-width: 992px) {
+  header {
+   font-size: clamp(18px, 2.5vw, 32px);
+    padding: clamp(10px, 3vw, 30px);
+    
+  }
+  .container{
+    padding: clamp(10px, 4vw, 40px);
+  }
+   header input {
+    width: clamp(220px, 40vw, 400px);
+    height: clamp(40px, 6vw, 55px);
+    
+  }
+  .cards {
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+   .footer-container {
+    flex-wrap: wrap;
+    text-align: center;
+    padding: clamp(20px, 5vw, 60px);
+    
+  }
+  .logo img {
+  width: clamp(50px, 8vw, 90px);   
+  height: clamp(40px, 6vw, 70px);  
+}
+}
+@media (max-width: 480px) {
+
+  .container h1 {
+    text-align: center;
+  }
+  header i {
+    flex-direction: column;
+    align-items: stretch;
+    font-size: 22px;
+  }
+  
+  .logo {
+    justify-content: center;
+  }
+
 }
